@@ -3,10 +3,10 @@ import React from 'react';
 
 const CTA: React.FC = () => {
   return (
-    <section className="py-16 lg:py-24 bg-black relative">
+    <section className="py-0 px-0 bg-black relative">
       <div className="absolute inset-0 grid-pattern opacity-10 pointer-events-none"></div>
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row relative z-10">
-        <div className="w-full md:w-2/3 p-12 md:p-16 lg:p-20 border-r border-gray-800">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row">
+        <div className="w-full md:w-2/3 p-16 md:p-24 border-r border-gray-800">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">准备好开始了吗？</h2>
           <p className="text-gray-400 mb-12 max-w-xl text-lg font-light">立即注册，获取 Modelverse 免费调用额度与 Sandbox 体验资格。</p>
           <div className="flex flex-col sm:flex-row">

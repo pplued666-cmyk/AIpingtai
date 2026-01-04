@@ -33,30 +33,30 @@ const Advantages: React.FC = () => {
   ];
 
   return (
-    <section id="advantages" className="py-16 lg:py-24 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-border-dark">
+    <section id="advantages" className="py-24 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-border-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 dark:border-border-dark pb-8">
           <div>
-            <p className="text-blue-600 dark:text-blue-500 font-mono mb-2 uppercase tracking-[0.2em] text-[10px]">Strategic Assets</p>
-            <h2 className="text-3xl font-display font-bold uppercase tracking-tight text-gray-900 dark:text-white">平台优势</h2>
+            <h2 className="text-3xl font-bold mb-2 uppercase">平台优势</h2>
+            <p className="text-gray-600 dark:text-gray-400 font-light">为企业级关键业务构建的坚实底座</p>
           </div>
           <div className="hidden md:block">
-            <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">/// ADVANTAGES_MANIFEST</span>
+            <span className="font-mono text-xs text-gray-400">/// ADVANTAGES_SECTION</span>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {sections.map((sec, idx) => (
             <div key={idx} className="p-0 bg-transparent">
               <div className="flex items-center gap-3 mb-6">
-                <span className="material-icons text-blue-600 text-xl">{sec.icon}</span>
-                <h3 className="font-bold text-sm uppercase tracking-wider text-gray-900 dark:text-white">{sec.title}</h3>
+                <span className="material-icons text-blue-600 text-2xl">{sec.icon}</span>
+                <h3 className="font-bold text-lg uppercase tracking-wide">{sec.title}</h3>
               </div>
-              <ul className="space-y-4 border-l border-gray-200 dark:border-border-dark pl-6">
+              <ul className="space-y-4 border-l border-gray-200 dark:border-gray-800 pl-6">
                 {sec.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400 group">
-                    <span className="text-blue-500 font-mono group-hover:text-blue-400 transition-colors">&gt;</span>
-                    <span className="font-medium leading-relaxed">{item}</span>
+                    <span className="text-blue-500 font-mono group-hover:text-blue-400">&gt;</span>
+                    {item}
                   </li>
                 ))}
               </ul>
