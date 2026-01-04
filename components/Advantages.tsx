@@ -1,0 +1,71 @@
+
+import React from 'react';
+
+const Advantages: React.FC = () => {
+  const sections = [
+    {
+      title: '安全合规',
+      icon: 'gpp_good',
+      items: [
+        'Sandbox环境物理级隔离',
+        '模型提供合规使用说明',
+        '支持等保三级认证标准'
+      ]
+    },
+    {
+      title: '高效交付',
+      icon: 'flash_on',
+      items: [
+        'Modelverse模型免部署直接调用',
+        'Sandbox 30秒启动开发环境',
+        '预置主流AI开发框架'
+      ]
+    },
+    {
+      title: '灵活扩展',
+      icon: 'extension',
+      items: [
+        '按需自动扩展GPU算力资源',
+        '无缝对接企业现有系统',
+        '支持私有化混合云部署'
+      ]
+    }
+  ];
+
+  return (
+    <section id="advantages" className="py-16 lg:py-24 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-border-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 dark:border-border-dark pb-8">
+          <div>
+            <p className="text-blue-600 dark:text-blue-500 font-mono mb-2 uppercase tracking-[0.2em] text-[10px]">Strategic Assets</p>
+            <h2 className="text-3xl font-display font-bold uppercase tracking-tight text-gray-900 dark:text-white">平台优势</h2>
+          </div>
+          <div className="hidden md:block">
+            <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">/// ADVANTAGES_MANIFEST</span>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-12">
+          {sections.map((sec, idx) => (
+            <div key={idx} className="p-0 bg-transparent">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-icons text-blue-600 text-xl">{sec.icon}</span>
+                <h3 className="font-bold text-sm uppercase tracking-wider text-gray-900 dark:text-white">{sec.title}</h3>
+              </div>
+              <ul className="space-y-4 border-l border-gray-200 dark:border-border-dark pl-6">
+                {sec.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400 group">
+                    <span className="text-blue-500 font-mono group-hover:text-blue-400 transition-colors">&gt;</span>
+                    <span className="font-medium leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Advantages;

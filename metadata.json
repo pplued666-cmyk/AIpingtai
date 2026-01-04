@@ -1,0 +1,8 @@
+{
+  "name": "RunC.AI Developer Platform",
+  "description": "A professional AI developer platform landing page featuring model markets, secure sandboxes, and developer-centric UI/UX.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

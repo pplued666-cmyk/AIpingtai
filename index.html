@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunC.AI - 企业专属 AI 开发平台</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563EB",
+                        "primary-hover": "#1D4ED8",
+                        "background-light": "#F8F8F8",
+                        "background-dark": "#050505",
+                        "surface-dark": "#0F0F0F",
+                        "border-dark": "#27272A",
+                        "text-secondary": "#A1A1AA",
+                    },
+                    fontFamily: {
+                        display: ["'Space Grotesk'", "sans-serif"],
+                        body: ["'Space Grotesk'", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "monospace"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #F8F8F8;
+        }
+        .dark body {
+            background-color: #050505;
+        }
+        .grid-pattern {
+            background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center top;
+        }
+        .dark .grid-pattern {
+            background-image: linear-gradient(to right, #27272a 1px, transparent 1px), linear-gradient(to bottom, #27272a 1px, transparent 1px);
+        }
+        .tech-border::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: -1px; width: 8px; height: 8px;
+            border-top: 1px solid #3B82F6; border-left: 1px solid #3B82F6;
+        }
+        .tech-border::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; right: -1px; width: 8px; height: 8px;
+            border-bottom: 1px solid #3B82F6; border-right: 1px solid #3B82F6;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden transition-colors duration-300">
+    <div id="root"></div>
+</body>
+</html>
